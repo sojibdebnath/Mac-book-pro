@@ -20,11 +20,8 @@ const express = document.getElementById('express');
 const deliveryCost = document.getElementById('deliveryCost');
 
 //total price
-const partCost = document.getElementById('totalPrice');
+const partsCost = document.getElementById('totalPrice');
 
-
-//update-total
-const updateTotalCost = document.getElementById('update-total');
 
 
 //memoey update
@@ -69,44 +66,19 @@ function updateTotal() {
     const expressCost = Number(deliveryCost.innerText);
     const totalPriceUpdate = mainPrice + memoryPrice + storagePrice + expressCost;
     totalPrice.innerText = totalPriceUpdate;
+    document.getElementById('updateTotal').innerText = totalPriceUpdate;
 
-    return totalPriceUpdate;
+    //discount added
+    document.getElementById('pomoButton').addEventListener('click', function () {
+        const pomoField = document.getElementById('pomocode');
+        if (pomoField.value == 'stevenkaku') {
+            const discount = parseFloat((20 / 100) * totalPriceUpdate);
+            const newDiscountBalance = partsCost.innerText - discount;
+
+            document.getElementById('updateTotal').innerText = newDiscountBalance;
+        }
+
+        pomoField.value = '';
+
+    });
 };
-
-document.getElementById('pomoButton').addEventListener('click', function () {
-    const pomoField = document.getElementById('pomocode');
-    if (pomoField.value == 'stevenkaku') {
-        document.getElementById('updateTotal').innerText = "totalPriceUpdate";
-    }
-    else {
-        console.log('hkjlghioho');
-    }
-    pomoField.value = '';
-
-})
-
-
-
-
-
-
-
-
-
-
-
-// const pomoButton = document.getElementById('pomoButton');
-// pomoButton.addEventListener('click', function () {
-//     const pomoField = document.getElementById('pomocode');
-//     discountPrice();
-// })
-
-// //promo code use 
-// function discountPrice() {
-//     if (pomoField.value == 'stevenkaku') {
-//         const discount = totalPriceUpdate.innerText / 20;
-//         const newTotal = totalPriceUpdate - discount;
-//         console.log(newTotal);
-//     }
-// }
-

@@ -61,7 +61,7 @@ function updateTotal() {
     //discount added
     document.getElementById('pomoButton').addEventListener('click', function () {
         const pomoField = document.getElementById('pomocode');
-        if (pomoField.value == 'stevenkaku') {
+        if (pomoField.value == 'stevekaku') {
             const discount = ((20 / 100) * totalPriceUpdate);
             const newDiscountBalance = partsCost.innerText - discount;
 

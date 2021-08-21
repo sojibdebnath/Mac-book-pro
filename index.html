@@ -6,10 +6,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mac Book Pro</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
 <body>
+    <section class="container mx-auto  p-6 ">
+        <div class="grid grid-cols-2 ">
+            <div class="">
+                <img src="images/mac.png" alt="">
+            </div>
+            <div class=" px-12">
+                <h3 class="text-4xl font-medium text-black">Customize your Blue 24-inch iMac with Apple M1 chip.</h3>
 
+                <p class="text-sm pt-3 ">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores,
+                    7-core
+                    GPU, and
+                    16-core Neural Engine 8GB unified memory 256GB SSd storage Two thunderbolt/USB 4 ports Magic Mouse
+                    Magic Keyboard- US English.</p>
+                <!-- memory -->
+                <h4 class="text-xl font-medium pt-7">Memory</h4>
+                <div class="flex flex-cols-2 ">
+                    <div class="pr-2">
+                        <button id="freeMemory" class="p-2 border border-gray-400 shadow hover:shadow-lg rounded ">8GB
+                            unified
+                            memory</button>
+                    </div>
+                    <div>
+                        <button id="extraMemory" class="p-2 border border-gray-400 shadow hover:shadow-lg rounded">16GB
+                            unified
+                            memory</button>
+                    </div>
+                </div>
+                <!-- Storage -->
+                <h4 class="text-xl font-medium pt-6">Storage</h4>
+                <div class="flex flex-cols-3 ">
+                    <div class="pr-3"> <button id="normalSsd"
+                            class="p-2 border border-gray-400 shadow hover:shadow-lg rounded ">256GB
+                            SSD
+                            storage</button>
+                    </div>
+                    <div class="pr-3">
+                        <button id="middleSsd" class="p-2 border border-gray-400 shadow hover:shadow-lg rounded ">512GB
+                            SSD
+                            storage</button>
+                    </div>
+                    <div>
+                        <button id="highestSsd" class="p-2 border border-gray-400 shadow hover:shadow-lg rounded ">1TB
+                            SSD
+                            storage</button>
+                    </div>
+                </div>
+                <!-- Delivery Charge -->
+                <h4 class="text-xl font-medium pt-6 py5">Choose your delivery option</h4>
+                <div class="flex flex-cols-2 ">
+                    <div class="pr-2">
+                        <button id="free"
+                            class="text-sm p-2 border border-gray-400 shadow hover:shadow-lg rounded ">Friday,Aug 25
+                            FREE
+                            Prime
+                            Delivery</button>
+                    </div>
+                    <div>
+                        <button id="express"
+                            class="text-sm p-2 border border-gray-400 shadow hover:shadow-lg rounded ">Friday,Aug 21
+                            Delivery
+                            Charge
+                            $20</button>
+                    </div>
+                </div>
+
+                <!-- Total price calculaltion -->
+                <h4 id="bestPrice" class="text-xl font-medium pt-4">Best Price : <span class="pl-24">
+                        $<span></span>1299</span></h4>
+
+                <h4 class="text-xl font-medium pt-4">Extra Memory Cost : <span class="pl-3">
+                        $<span id="memoryCost">0</span></span></h4>
+
+                <h4 class="text-xl font-medium pt-4">Extra Storage Cost : <span class="pl-5">
+                        $<span id="storageCost">0</span></span></h4>
+
+                <h4 class="text-xl font-medium py-4">Delivery charge : <span class="pl-12">
+                        $<span id="deliveryCost">0</span></span></h4>
+
+                <hr class="divider">
+                <!-- Total -->
+                <h4 class="text-xl font-medium py-4 pl-12">Total Price : <span class="pl-12">
+                        $ <span id="totalPrice">1299</span></span></h4>
+
+                <!-- Promo Code use  -->
+                <div class="pt-5">
+                    <h4 class="text-xl">Add Pomo Code</h4>
+                    <input id="pomocode" class="border border-gray-500 rounded mb-4 px-4" type="text" placeholder="">
+                    <button id="pomoButton" class="bg-red-600 px-4 rounded py-1 text-white font-medium">Apply</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Updated Total -->
+        <hr>
+        <h2 class="text-4xl font-medium text-center	py-10">Total : $ <span id="update-total">1299</span></h2>
+    </section>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
